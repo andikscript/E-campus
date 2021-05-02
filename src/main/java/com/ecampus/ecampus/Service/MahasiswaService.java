@@ -13,4 +13,8 @@ public interface MahasiswaService {
     List<Mahasiswa> getAllMahasiswa();
 
     Mahasiswa addMahasiswa(Mahasiswa mahasiswa);
+
+    Mahasiswa updateMahasiswa(String nim, Mahasiswa mahasiswa);
+
+    Optional<Mahasiswa> deleteMahasiswa(String nim);
 }
