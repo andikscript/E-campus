@@ -30,4 +30,14 @@ public class MahasiswaApi {
     public Mahasiswa addMahasiswa(@RequestBody Mahasiswa mahasiswa) {
         return mahasiswaService.addMahasiswa(mahasiswa);
     }
+
+    @PutMapping("/mahasiswa/{nim}")
+    public Mahasiswa updateMahasiswa(@PathVariable("nim") String nim, @RequestBody Mahasiswa mahasiswa) {
+        return mahasiswaService.updateMahasiswa(nim, mahasiswa);
+    }
+
+    @DeleteMapping("/mahasiswa/{nim}")
+    public Optional<Mahasiswa> deleteMahasiswa(@PathVariable("nim") String nim) {
+        return mahasiswaService.deleteMahasiswa(nim);
+    }
 }
